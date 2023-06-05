@@ -1,1 +1,23 @@
-
+kind: Environment
+version: v1
+name: Source_Code_build_using_S2I
+type: primary
+components:
+    -
+        kind: GenericComponent
+        runnerImage: 'registry.access.redhat.com/ubi8/openjdk-8:latest'
+        deploy:
+            - echo 'Running the run script'
+            - /usr/s2i/local/run
+        destroy:
+        start:
+            - "Changing the ownership"
+            - chown -R jboss:root .
+            - echo "Copying the source code to /tmp/src"
+            - mv **/* /tmp/src/
+            - echo 'Running the assemble script'
+            - /usr/s2i/local/assemble
+        stop:
+        version: v1
+        gitRepo: 'https://github.com/himanshumps/spring-petclinic.git'
+        gitBranch: master
