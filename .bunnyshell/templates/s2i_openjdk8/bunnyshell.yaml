@@ -9,9 +9,9 @@ components:
         runnerImage: "docker.io/himanshumps/openjdk_8_bunnyshell:master"
         deploy:
             - echo "Inside the deploy method"
-            - mkdir /tmp/src
+            - mkdir /tmp/src/
             - echo "Copying the source code to /tmp/src"
-            - mv **/* /tmp/src/
+            - rsync --remove-source-files ./ /tmp/src/
             - echo "Running the assemble script"
             - '/usr/local/s2i/assemble'        
             - echo "Running the run script"
