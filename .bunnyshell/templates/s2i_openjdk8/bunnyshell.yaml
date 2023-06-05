@@ -8,6 +8,7 @@ components:
         kind: GenericComponent
         runnerImage: "himanshumps/openjdk_8_bunnyshell:master"
         deploy:
+            - echo "Inside the deploy method"
             - echo "Changing the ownership"
             - chown -R jboss:root .
             - echo "Copying the source code to /tmp/src"
