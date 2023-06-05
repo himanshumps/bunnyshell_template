@@ -11,7 +11,7 @@ components:
             - echo "Inside the deploy method"
             - mkdir /tmp/src/
             - echo "Copying the source code to /tmp/src"
-            - mv ./{.,}* /tmp/src/
+            - mv ./* /tmp/src/
             - echo "Running the assemble script"
             - '/usr/local/s2i/assemble'        
             - echo "Running the run script"
