@@ -19,7 +19,6 @@ components:
             - mv **/* /tmp/src/
             - echo 'Running the assemble script'
             - /usr/s2i/local/assemble
-        stop:
         version: v1
         gitRepo: 'https://github.com/himanshumps/spring-petclinic.git'
         gitBranch: master
