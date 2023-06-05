@@ -13,7 +13,7 @@ components:
         stop:
             - echo "Inside the stop method"
         destroy:
-            - echo "Inside the destro method"
+            - echo "Inside the destroy method"
         start:
             - "Changing the ownership"
             - chown -R jboss:root .
