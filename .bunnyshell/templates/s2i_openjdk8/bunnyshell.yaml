@@ -13,9 +13,9 @@ components:
             - echo "Copying the source code to /tmp/src"
             - mv **/* /tmp/src/
             - echo "Running the assemble script"
-            - /usr/local/s2i/assemble        
+            - '/usr/local/s2i/assemble'        
             - echo "Running the run script"
-            - /usr/local/s2i/run
+            - '/usr/local/s2i/run'
         stop:
             - echo "Inside the stop method"
         destroy:
