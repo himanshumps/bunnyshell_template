@@ -10,8 +10,10 @@ components:
         deploy:
             - echo "Inside the deploy method"
             - mkdir /tmp/src/
-            - echo "Copying the source code to /tmp/src"
-            - mv ./* /tmp/src/
+            - echo "Copying the source code to /tmp/src/"
+            - cp  --verbose -R ./* /tmp/src/
+            - echo "List the /tmp/src/"
+            - ls -altr /tmp/src/
             - echo "Running the assemble script"
             - '/usr/local/s2i/assemble'        
             - echo "Running the run script"
