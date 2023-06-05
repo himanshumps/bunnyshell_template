@@ -4,7 +4,7 @@ name: Source_Code_build_using_S2I
 type: primary
 components:
     -
-        name: spring_petclinic_app
+        name: spring-petclinic-app
         kind: GenericComponent
         runnerImage: 'registry.access.redhat.com/ubi8/openjdk-8:latest'
         deploy:
