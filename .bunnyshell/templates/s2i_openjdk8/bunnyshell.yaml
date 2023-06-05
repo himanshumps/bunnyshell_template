@@ -25,3 +25,4 @@ components:
         version: v1
         gitRepo: 'https://github.com/himanshumps/spring-petclinic.git'
         gitBranch: master
+        gitApplicationPath: /
