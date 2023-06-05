@@ -7,9 +7,9 @@ components:
         kind: GenericComponent
         runnerImage: 'registry.access.redhat.com/ubi8/openjdk-8:latest'
         deploy:
-            - echo 'Running the run script'
-            - /usr/s2i/local/run
+            - echo "Running the run script"
         destroy:
+            - echo "Inside the destro method"
         start:
             - "Changing the ownership"
             - chown -R jboss:root .
