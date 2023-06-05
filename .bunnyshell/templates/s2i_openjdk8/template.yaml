@@ -1,0 +1,12 @@
+name: S2I build for openjdk 8 fat jar applications
+description: S2I build for openjdk 8 fat jar applications
+tags:
+   - Java 8 
+   - openjdk
+   - fatjar
+icons: [ 'java']
+stack:
+  packages:
+    - name: Openjdk
+      version: '8'
+discoverable: true
