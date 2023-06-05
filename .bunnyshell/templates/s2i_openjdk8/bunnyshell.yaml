@@ -6,7 +6,7 @@ components:
     -
         name: spring-petclinic-app
         kind: GenericComponent
-        runnerImage: "himanshumps/openjdk_8_bunnyshell:master"
+        runnerImage: "docker.io/himanshumps/openjdk_8_bunnyshell:master"
         deploy:
             - echo "Inside the deploy method"
             - echo "Changing the ownership"
