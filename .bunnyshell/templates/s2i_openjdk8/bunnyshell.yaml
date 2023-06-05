@@ -6,7 +6,7 @@ components:
     -
         name: spring-petclinic-app
         kind: GenericComponent
-        runnerImage: 'registry.access.redhat.com/ubi8/openjdk-8:latest'
+        runnerImage: 'registry.access.redhat.com/ubi8/openjdk-8:1.15-1.1682399183'
         deploy:
             - echo "Running the run script"
             - /usr/s2i/local/run
