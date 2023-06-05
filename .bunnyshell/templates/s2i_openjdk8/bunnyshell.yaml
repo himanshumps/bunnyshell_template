@@ -9,8 +9,6 @@ components:
         runnerImage: "docker.io/himanshumps/openjdk_8_bunnyshell:master"
         deploy:
             - echo "Inside the deploy method"
-            - echo "Changing the ownership"
-            - chown -R jboss:root .
             - echo "Copying the source code to /tmp/src"
             - mv **/* /tmp/src/
             - echo "Running the assemble script"
