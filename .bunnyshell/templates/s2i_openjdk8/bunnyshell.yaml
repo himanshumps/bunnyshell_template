@@ -8,6 +8,12 @@ components:
         kind: GenericComponent
         runnerImage: "himanshumps/openjdk_8_bunnyshell:master"
         deploy:
+            - echo "Changing the ownership"
+            - chown -R jboss:root .
+            - echo "Copying the source code to /tmp/src"
+            - mv **/* /tmp/src/
+            - echo "Running the assemble script"
+            - /usr/local/s2i/assemble        
             - echo "Running the run script"
             - /usr/local/s2i/run
         stop:
@@ -15,12 +21,7 @@ components:
         destroy:
             - echo "Inside the destroy method"
         start:
-            - echo "Changing the ownership"
-            - chown -R jboss:root .
-            - echo "Copying the source code to /tmp/src"
-            - mv **/* /tmp/src/
-            - echo "Running the assemble script"
-            - /usr/local/s2i/assemble
+            - echo "Inside the start method"
         version: v1
         gitRepo: 'https://github.com/himanshumps/spring-petclinic.git'
         gitBranch: master
